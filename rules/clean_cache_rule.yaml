@@ -1,10 +1,10 @@
----  
-name: "clean_cache_rule"  
-description: "Rule untuk membersihkan cache jika diperlukan."  
-enabled: true  
-trigger:  
-  type: "advanced_monitoring.cache_cleanup_needed"  
-action:  
-  ref: "advanced_monitoring.clean_cache"  
-  parameters:  
-    cache_type: "{{ trigger.cache_type }}"  
+---
+name: "clean_cache_rule"
+description: "Rule untuk membersihkan cache jika diperlukan."
+enabled: true
+trigger:
+  type: "monitor_test.cache_cleanup_needed"
+action:
+  ref: "monitor_test.clean_cache"
+  parameters:
+    cache_type: "{{ trigger.cache_type }}"

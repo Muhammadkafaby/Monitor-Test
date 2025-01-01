@@ -11,17 +11,17 @@ class ResourceMonitorSensor(PollingSensor):
         memory = psutil.virtual_memory()
         disk = psutil.disk_usage('/')
         if cpu_usage > self.config.get('cpu_threshold', 90):
-            self.dispatch(trigger='advanced_monitoring.critical_alert', payload={
+            self.dispatch(trigger='monitor_test.critical_alert', payload={
                 'type': 'CPU',
                 'value': cpu_usage
             })
         if memory.percent > self.config.get('memory_threshold', 90):
-            self.dispatch(trigger='advanced_monitoring.critical_alert', payload={
+            self.dispatch(trigger='monitor_test.critical_alert', payload={
                 'type': 'Memory',
                 'value': memory.percent
             })
         if disk.percent > self.config.get('disk_threshold', 90):
-            self.dispatch(trigger='advanced_monitoring.critical_alert', payload={
+            self.dispatch(trigger='monitor_test.critical_alert', payload={
                 'type': 'Disk',
                 'value': disk.percent
             })

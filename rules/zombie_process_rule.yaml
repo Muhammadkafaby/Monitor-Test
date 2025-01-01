@@ -1,11 +1,11 @@
----  
-name: "zombie_process_rule"  
-description: "Rule untuk menangani zombie process yang terdeteksi."  
-enabled: true  
-trigger:  
-  type: "advanced_monitoring.zombie_detected"  
-action:  
-  ref: "advanced_monitoring.notify_discord"  
-  parameters:  
-    webhook_url: "{{ config.webhook_url }}"  
-    message: "Zombie process detected: {{ trigger.name }} (PID: {{ trigger.pid }})"  
+---
+name: "zombie_process_rule"
+description: "Rule untuk menangani zombie process yang terdeteksi."
+enabled: true
+trigger:
+  type: "monitor_test.zombie_detected"
+action:
+  ref: "monitor_test.notify_discord"
+  parameters:
+    webhook_url: "{{ config.webhook_url }}"
+    message: "Zombie process detected: {{ trigger.name }} (PID: {{ trigger.pid }})"

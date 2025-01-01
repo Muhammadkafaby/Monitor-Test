@@ -1,0 +1,5 @@
+name: "monitor_test"
+description: "Pack for monitoring and notifications"
+version: "1.0.0"
+author: "Muhammad Kafaby"
+email: "kafaby@student.telkomuniversity.ac.id"
