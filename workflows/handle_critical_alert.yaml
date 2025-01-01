@@ -1,0 +1,8 @@
+version: 1.0
+description: Workflow untuk menangani alert kritis.
+tasks:
+  notify:
+    action: advanced_monitoring.notify_discord
+    input:
+      webhook_url: "{{ config.webhook_url }}"
+      message: "ALERT! {{ trigger.reason }} detected on {{ trigger.host }}."

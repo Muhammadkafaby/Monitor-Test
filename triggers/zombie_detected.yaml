@@ -1,0 +1,12 @@
+---  
+name: "zombie_detected"  
+description: "Trigger untuk mendeteksi zombie process."  
+payload_schema:  
+  type: "object"  
+  properties:  
+    pid:  
+      type: "integer"  
+    name:  
+      type: "string"  
+    status:  
+      type: "string"  

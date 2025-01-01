@@ -1,0 +1,15 @@
+---
+name: "notify_discord"
+runner_type: "python-script"
+description: "Mengirim notifikasi ke Discord."
+enabled: true
+entry_point: "notify_discord.py"
+parameters:
+  webhook_url:
+    type: "string"
+    description: "Discord webhook URL"
+    required: true
+  message:
+    type: "string"
+    description: "Pesan yang akan dikirim"
+    required: true

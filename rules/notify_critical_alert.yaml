@@ -1,0 +1,11 @@
+---  
+name: "notify_critical_alert"  
+description: "Notifikasi untuk alert kritis."  
+enabled: true  
+trigger:  
+  type: "advanced_monitoring.critical_alert"  
+action:  
+  ref: "advanced_monitoring.notify_discord"  
+  parameters:  
+    webhook_url: "{{ config.webhook_url }}"  
+    message: "Critical alert detected: Type - {{ trigger.type }}, Value - {{ trigger.value }}."  

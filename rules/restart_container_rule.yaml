@@ -1,0 +1,9 @@
+name: "restart_container_rule"
+description: "Restart container jika gagal berjalan."
+enabled: true
+trigger:
+  type: "advanced_monitoring.container_failed"
+action:
+  ref: "advanced_monitoring.restart_container"
+  parameters:
+    container_id: "{{ trigger.container_id }}"

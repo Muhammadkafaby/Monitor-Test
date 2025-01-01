@@ -1,0 +1,6 @@
+---
+webhook_url: "https://discord.com/api/webhooks/1321090400580276275/RbQ0zS-Ig0ZrMaDUG4l1BrEnp7CoFptDWBu_imKPHEzS6VVEFffww9vTMUXlHytjI1se"
+poll_interval: 10
+cpu_threshold: 90
+memory_threshold: 90
+disk_threshold: 90

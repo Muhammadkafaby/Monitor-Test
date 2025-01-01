@@ -1,0 +1,15 @@
+---  
+name: "analyze_logs"  
+runner_type: "python-script"  
+description: "Menganalisis log untuk mendeteksi masalah."  
+enabled: true  
+entry_point: "analyze_logs.py"  
+parameters:  
+  log_file:  
+    type: "string"  
+    description: "Path ke file log yang akan dianalisis"  
+    required: true  
+  alert_threshold:  
+    type: "integer"  
+    description: "Ambang batas untuk mengirim alert berdasarkan analisis log"  
+    required: false  

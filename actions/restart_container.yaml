@@ -1,0 +1,11 @@
+---  
+name: "restart_container"  
+runner_type: "python-script"  
+description: "Restart a Docker container."  
+enabled: true  
+entry_point: "restart_container.py"  
+parameters:  
+  container_id:  
+    type: "string"  
+    description: "ID of the Docker container to restart."  
+    required: true  
