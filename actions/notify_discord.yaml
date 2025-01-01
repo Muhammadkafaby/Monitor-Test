@@ -1,5 +1,6 @@
 ---
 name: "notify_discord"
+pack: "monitor_test"
 runner_type: "python-script"
 description: "Mengirim notifikasi ke Discord."
 enabled: true
@@ -7,9 +8,9 @@ entry_point: "notify_discord.py"
 parameters:
   webhook_url:
     type: "string"
-    description: "Discord webhook URL"
+    description: "URL webhook Discord untuk mengirim notifikasi"
     required: true
   message:
     type: "string"
-    description: "Pesan yang akan dikirim"
+    description: "Pesan yang akan dikirim ke Discord"
     required: true

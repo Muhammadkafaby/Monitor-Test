@@ -1,11 +1,15 @@
 ---
 name: "notify_critical_alert"
-description: "Notifikasi untuk alert kritis."
+pack: "monitor_test"
+description: "Notify when a critical alert is detected"
 enabled: true
 trigger:
-  type: "monitor_test.critical_alert"
+  type: "core.st2.generic.trigger"
+  parameters:
+    ref: "monitor_test.critical_alert"
+criteria: {}
 action:
   ref: "monitor_test.notify_discord"
   parameters:
-    webhook_url: "{{ config.webhook_url }}"
-    message: "Critical alert detected: Type - {{ trigger.type }}, Value - {{ trigger.value }}."
+    webhook_url: "https://discord.com/api/webhooks/1321090400580276275/RbQ0zS-Ig0ZrMaDUG4l1BrEnp7CoFptDWBu_imKPHEzS6VVEFffww9vTMUXlHytjI1se"
+    message: "A critical alert has been detected!"

@@ -10,4 +10,16 @@ class ZombieProcessSensor(PollingSensor):
         zombie_processes = [p for p in psutil.process_iter(['pid', 'name', 'status']) if p.info['status'] == 'zombie']
         for process in zombie_processes:
             self.logger.info(f"Zombie process detected: {process.info}")
-            self.dispatch(trigger='monitor_test.zombie_detected', payload=process.info)
+            self.sensor_service.dispatch(trigger='monitor_test.zombie_detected', payload=process.info)
+
+    def cleanup(self):
+        pass
+
+    def add_trigger(self, trigger):
+        pass
+
+    def update_trigger(self, trigger):
+        pass
+
+    def remove_trigger(self, trigger):
+        pass

@@ -1,5 +1,7 @@
+---
 name: "restart_container_rule"
-description: "Restart container jika gagal berjalan."
+pack: "monitor_test"
+description: "Restart container if it fails."
 enabled: true
 trigger:
   type: "monitor_test.container_failed"

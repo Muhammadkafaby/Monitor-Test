@@ -1,0 +1,6 @@
+---
+class_name: "ResourceMonitorSensor"
+poll_interval: 10
+cpu_threshold: 90
+memory_threshold: 90
+disk_threshold: 90

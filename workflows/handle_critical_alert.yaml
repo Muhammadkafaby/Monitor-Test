@@ -1,8 +1,13 @@
-version: 1.0
-description: Workflow untuk menangani alert kritis.
-tasks:
-  notify:
-    action: monitor_test.notify_discord
-    input:
-      webhook_url: "{{ config.webhook_url }}"
-      message: "ALERT! {{ trigger.reason }} detected on {{ trigger.host }}."
+---
+name: "handle_critical_alert"
+pack: "monitor_test"
+description: "Handle critical alerts by sending a notification to Discord."
+enabled: true
+trigger:
+  type: "monitor_test.critical_alert"
+criteria: {}
+action:
+  ref: "monitor_test.notify_discord"
+  parameters:
+    webhook_url: "{{ config.webhook_url }}"
+    message: "Critical alert detected for {{ trigger.resource }} usage: {{ trigger.usage }}%"

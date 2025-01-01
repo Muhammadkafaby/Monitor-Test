@@ -1,0 +1,11 @@
+# filepath: /opt/stackstorm/packs/monitor_test/actions/advanced_monitoring.yaml
+---
+name: "advanced_monitoring"
+pack: "monitor_test"
+description: "Advanced monitoring based on configuration file"
+runner_type: "python-script"
+entry_point: "advanced_monitoring.py"
+parameters:
+  config_path:
+    type: "string"
+    required: true

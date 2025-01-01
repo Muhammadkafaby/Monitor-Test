@@ -1,5 +1,6 @@
 ---
 name: "zombie_process_rule"
+pack: "monitor_test"
 description: "Rule untuk menangani zombie process yang terdeteksi."
 enabled: true
 trigger:

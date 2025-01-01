@@ -1,15 +1,16 @@
----  
-name: "clean_cache"  
-runner_type: "python-script"  
-description: "Membersihkan cache untuk mengoptimalkan kinerja sistem."  
-enabled: true  
-entry_point: "clean_cache.py"  
-parameters:  
-  cache_path:  
-    type: "string"  
-    description: "Path ke direktori cache yang akan dibersihkan"  
-    required: true  
-  force:  
-    type: "boolean"  
-    description: "Apakah akan memaksa pembersihan cache?"  
-    default: false  
+---
+name: "clean_cache"
+pack: "monitor_test"
+runner_type: "python-script"
+description: "Membersihkan cache untuk mengoptimalkan kinerja sistem."
+enabled: true
+entry_point: "clean_cache.py"
+parameters:
+  cache_path:
+    type: "string"
+    description: "Path ke direktori cache yang akan dibersihkan"
+    required: true
+  force:
+    type: "boolean"
+    description: "Apakah akan memaksa pembersihan cache?"
+    default: false

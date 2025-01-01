@@ -1,9 +1,10 @@
 name: "critical_alert"
+pack: "monitor_test"
 description: "Trigger untuk alert kritis."
 payload_schema:
   type: "object"
   properties:
-    type:
+    resource:
       type: "string"
-    value:
+    usage:
       type: "number"

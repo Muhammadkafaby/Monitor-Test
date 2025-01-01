@@ -1,10 +1,11 @@
 ---
 name: "clean_cache_rule"
-description: "Rule untuk membersihkan cache jika diperlukan."
+pack: "monitor_test"
+description: "Rule to clean cache when needed"
 enabled: true
 trigger:
   type: "monitor_test.cache_cleanup_needed"
+criteria: {}
 action:
   ref: "monitor_test.clean_cache"
-  parameters:
-    cache_type: "{{ trigger.cache_type }}"
+  parameters: {}

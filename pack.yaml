@@ -1,3 +1,4 @@
+---
 name: "monitor_test"
 description: "Pack for monitoring and notifications"
 version: "1.0.0"
